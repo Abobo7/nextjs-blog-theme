@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : 'Abobo';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : '心事浩茫连广宇，于无声处听惊雷。';
+    : '“温两碗酒，要一碟茴香豆”';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : 'All rights reserved.';
