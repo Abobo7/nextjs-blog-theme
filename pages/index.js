@@ -9,6 +9,9 @@ import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
 export default function Index({ posts, globalData }) {
+  // 将您的音乐链接放在这里
+  const musicUrl = "https://music.163.com/song/media/outer/url?id=28263184";
+
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -47,6 +50,12 @@ export default function Index({ posts, globalData }) {
         </ul>
       </main>
       <Footer copyrightText={globalData.footerText} />
+      <div className="audio-player">
+        <audio controls>
+          <source src={musicUrl} type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
       <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"
